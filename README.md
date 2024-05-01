@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WoowUp Email Server Test (Challenge)
 
-## Getting Started
+This project is an interface designed to test an email server with fault tolerance. It provides a simple and intuitive way to send test emails and observe the behavior of the server under different conditions.
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The application provides fields for the user to input the recipient's email address, the subject of the email, and the message content. It uses two different email providers to send these test emails.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The first provider only allows sending emails to already registered recipients. If you wish to register a recipient, please contact curellich@gmail.com.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The second provider allows sending emails to any recipient, but the sender must be registered. In this case, the registered sender is curellich@gmail.com.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Environment Variables
 
-## Learn More
+The application uses the following environment variables:
 
-To learn more about Next.js, take a look at the following resources:
+- `NODE_ENV`: This variable sets the environment in which the Node.js application will run. In this case, it is set to `production`.
+- `NEXT_URL_BASE`: This variable holds the base URL for the Next.js application. It is currently set to `192.168.1.209`.
+- `SERVER_PORT`: This variable sets the port on which the server will run. It is currently set to `3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To use the application, simply fill in the 'To', 'Subject', and 'Message' fields and click 'Send'. The application will then send an email using one of the two providers, depending on the recipient's registration status.
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For any further queries or to register a recipient with the first email provider, please contact curellich@gmail.com.

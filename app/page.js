@@ -12,7 +12,7 @@ export default function Home() {
                 <h1 className="text-5xl font-bold text-center mb-5 mt-10">
                     Welcome to
                 </h1>
-                <div className={'lg:w-1/2'}>
+                <div className={'sm:w-1/2'}>
                     <Image
                         src={woowUpLogo}
                         width={'fill'}
